@@ -15,7 +15,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5046/register', { username, password });
+      const response = await axios.post('register', { username, password });
       console.log('Username:', username);
 console.log('Password:', password);
 

@@ -3,7 +3,10 @@ import axios from './axiosConfig'; // שימוש בהגדרות axios שלך
 
 
   const service = {
+
     login: async (username, password) => {
+      console.log(process.env.REACT_APP_API_URL);
+
       try {
         const res = await axios.post('/login', { username, password }, {
           headers: { 'Content-Type': 'application/json' }
