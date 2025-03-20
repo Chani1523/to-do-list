@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-import axios from 'axios';
+import axios from 'axiosConfig';
 
 function Register() {
   const [username, setUsername] = useState('');
@@ -15,9 +15,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/register`, { username, password });
-      console.log('Response data:', response.data);
-      console.log('Response status:', response.status);
+      const response = await axios.post('/register', { username, password });
       console.log('Username:', username);
 console.log('Password:', password);
 
