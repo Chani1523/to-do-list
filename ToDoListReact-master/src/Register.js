@@ -15,7 +15,9 @@ function Register() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('/register', { username, password });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/register`, { username, password });
+      console.log('Response data:', response.data);
+      console.log('Response status:', response.status);
       console.log('Username:', username);
 console.log('Password:', password);
 
