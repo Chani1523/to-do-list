@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-import axios from 'axiosConfig';
+import axios from './axiosConfig'; 
 
 function Register() {
   const [username, setUsername] = useState('');
