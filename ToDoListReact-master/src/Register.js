@@ -15,11 +15,11 @@ function Register() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('register', { username, password });
+      const response = await axios.post('/register', { username, password });
       console.log('Username:', username);
 console.log('Password:', password);
 
-      if (response.status === 201) {
+      if (response.status === 200) {
         setMessage('נרשמת בהצלחה! התחבר עכשיו...');
         setTimeout(() => navigate('/login'), 2000); // מעבר לדף ההתחברות אחרי הרשמה
       }
